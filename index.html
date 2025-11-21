@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- DELETE CONFIRMATION MODAL -->
+    <div class="delete-modal" id="delete-modal">
+        <div class="delete-modal-content">
+            <div class="delete-modal-title">Delete Participant</div>
+            <div class="delete-modal-text">Are you sure, that you want to delete the participant?</div>
+            <div class="delete-modal-buttons">
+                <button class="delete-modal-btn delete-modal-yes" id="delete-yes-btn">Yes</button>
+                <button class="delete-modal-btn delete-modal-no" id="delete-no-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/Logo%20(1).png" alt="Logo" width="187" height="28">
+        </div>
+    </header>
+
+    <!-- LANDING PAGE -->
+    <section class="landing-wrapper" id="landing">
+        <!-- Decorations -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat.png" class="flake f1">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(1).png" class="flake f2">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(2).png" class="flake f3">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(3).png" class="flake f4">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/firework.png" class="fw fw1">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/firework%20(1).png" class="fw fw2">
+        <!-- New presents image -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/presents.png" class="presents-img">
+        <!-- New present image -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/present.png" class="present-img">
+        <!-- New snowglobe image -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/snowglobe.png" class="snowglobe-img">
+        <!-- Floating feature cards -->
+        <div class="float-card fc1"><img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/Christmas%20Icons.png"> Have fun</div>
+        <div class="float-card fc2"><img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/Christmas%20Icons%20(1).png"> Match people</div>
+        <div class="float-card fc3"><img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/Christmas%20Icons%20(2).png"> Share wishes</div>
+        <div class="float-card fc4"><img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/Christmas%20Icons%20(3).png"> Give presents</div>
+        <h1>Make This Holiday Magical<br>with Secret Nick</h1>
+        <p>
+            It's a secret — don't tell who you're matched with!<br>
+            Use the wishlist or preferences to pick the perfect gift.<br>
+            Be ready for the big gift exchange!
+        </p>
+        <a href="#" class="landing-btn" id="create-room-btn">Create Your Room</a>
+    </section>
+
+    <!-- APP PAGE -->
+    <section class="app-page" id="app-page">
+        <!-- Decorations for app page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat.png" class="app-flake app-f1">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(1).png" class="app-flake app-f2">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(2).png" class="app-flake app-f3">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(3).png" class="app-flake app-f4">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/firework.png" class="app-fw app-fw1">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/firework%20(1).png" class="app-fw app-fw2">
+        <!-- New presents image for app page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/presents.png" class="app-presents-img">
+        <!-- New present image for app page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/present.png" class="app-present-img">
+        <!-- New snowglobe image for app page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/snowglobe.png" class="app-snowglobe-img">
+        <!-- Progress Steps -->
+        <div class="progress-steps" id="progress-steps">
+            <div class="step active" id="step1">
+                <div class="step-number">1</div>
+                <div class="step-text">Create room</div>
+            </div>
+            <div class="step" id="step2">
+                <div class="step-number">2</div>
+                <div class="step-text">Add personal info</div>
+            </div>
+            <div class="step" id="step3">
+                <div class="step-number">3</div>
+                <div class="step-text">Add wishlist</div>
+            </div>
+        </div>
+        <div class="wrapper" id="form-wrapper">
+            <!-- Decoration image in top right corner for step 1 -->
+            <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat.png" class="wrapper-decoration" id="step1-decoration">
+            <!-- Step 1 Content -->
+            <div id="step1-content">
+                <h1>Create Your Secret Nick Room</h1>
+                <p class="subtitle">Let the holiday magic begin! Set up your gift exchange in just a few steps.</p>
+                <!-- ROOM NAME -->
+                <label>Room name *</label>
+                <input type="text" class="input" id="room-name" placeholder="Enter your room name">
+                <!-- ROOM DESCRIPTION -->
+                <label style="margin-top:20px;">Room description *</label>
+                <textarea class="textarea" id="room-description" placeholder="Enter your message here..."></textarea>
+                <!-- DATE & BUDGET -->
+                <div class="row">
+                    <div class="half">
+                        <label>Gift Exchange date *</label>
+                        <input type="date" class="date-input" id="exchange-date">
+                    </div>
+                    <div class="half">
+                        <label>Gift budget *</label>
+                        <div class="budget-wrapper">
+                            <input type="number" class="budget-input" id="gift-budget" placeholder="Type in your budget">
+                            <div class="currency-tag">UAH</div>
+                        </div>
+                        <small style="color:#777;">0 means unlimited budget</small>
+                    </div>
+                </div>
+                <!-- BUTTON -->
+                <button class="continue-btn" id="continue-btn">Continue</button>
+            </div>
+            <!-- Step 2 Content -->
+            <div id="step2-content" style="display: none;">
+                <!-- Decoration image in top right corner for step 2 -->
+                <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/car.png" class="wrapper-decoration" id="step2-decoration">
+                <h1>Add Your Details</h1>
+                <p class="subtitle">Secret Nick needs to know where to send your present!</p>
+                <!-- NAME FIELDS -->
+                <div class="row">
+                    <div class="half">
+                        <label>First name *</label>
+                        <input type="text" class="input" id="first-name" placeholder="e.g. Nickolas">
+                    </div>
+                    <div class="half">
+                        <label>Last name *</label>
+                        <input type="text" class="input" id="last-name" placeholder="e.g. Secret">
+                    </div>
+                </div>
+                <!-- PHONE + EMAIL -->
+                <div class="row" style="margin-top:25px;">
+                    <div class="half">
+                        <label>Phone number *</label>
+                        <div class="phone-wrapper">
+                            <div class="phone-prefix">+380</div>
+                            <input type="text" class="input" id="phone" placeholder="77 777 77 77">
+                        </div>
+                    </div>
+                    <div class="half">
+                        <label>Email</label>
+                        <input type="email" class="input" id="email" placeholder="nickolas@example.com">
+                    </div>
+                </div>
+                <!-- ADDRESS -->
+                <label style="margin-top:25px;">Your delivery address (no North Pole required!) *</label>
+                <textarea class="textarea" id="address" placeholder="Where should St. Nick deliver your gift?"></textarea>
+                <!-- BUTTON -->
+                <button class="continue-btn" id="continue-btn-step2">Continue</button>
+                <!-- BACK -->
+                <a href="#" class="back-link" id="back-link-step2">← Back to the previous step</a>
+            </div>
+            <!-- Step 3 Content -->
+            <div id="step3-content" style="display: none;">
+                <!-- Decoration image in top right corner for step 3 -->
+                <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/presents.png" class="wrapper-decoration" id="step3-decoration">
+                <h1>Add Your Wishes</h1>
+                <p class="subtitle">Let your Secret Nick know what would make you smile this season.</p>
+                <div class="gift-budget" id="gift-budget-display">
+                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/presents.png" class="gift-budget-icon">
+                    Gift Budget: <strong>0 UAH</strong>
+                </div>
+                <!-- Wish Option 1 -->
+                <div class="section">
+                    <div class="section-title">
+                        <input type="radio" name="wishType" checked id="wish-ideas">
+                        <label for="wish-ideas">I have gift ideas! (add up to 5 gift ideas)</label>
+                    </div>
+                    <div id="wish-items-container">
+                        <!-- First wish item -->
+                        <div class="wish-item" id="wish-item-1">
+                            <div class="row">
+                                <div class="half">
+                                    <label>I wish for *</label>
+                                    <input type="text" class="input wish-item-input" placeholder="Enter your wish name" maxlength="40">
+                                    <div class="count">0 / 40</div>
+                                </div>
+                                <div class="half">
+                                    <label>Add link</label>
+                                    <input type="url" class="input wish-link-input" placeholder="E.g. https://example.com/item">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-btn" id="add-wish-btn">+ Add Wish</button>
+                </div>
+                <!-- Wish Option 2 -->
+                <div class="option-box">
+                    <label>
+                        <input type="radio" name="wishType" id="surprise-gift">
+                        I want a surprise gift
+                    </label>
+                </div>
+                <!-- Button -->
+                <button class="complete-btn" id="complete-btn">Complete</button>
+                <!-- Back -->
+                <a href="#" class="back-link" id="back-link-step3">← Back to the previous step</a>
+            </div>
+            <!-- Step 4 Content -->
+            <div id="step4-content" style="display: none;">
+                <!-- Decoration image in top right corner for step 4 -->
+                <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/wreath.png" class="wrapper-decoration" id="step4-decoration">
+                <h1>Your Secret Nick Room is Ready!</h1>
+                <p>Share the link below with up to 20 friends to invite them — and don't lose your personal link! Let the festive magic begin!</p>
+                <!-- Admin Toggle -->
+                <div class="admin-toggle" id="admin-toggle">
+                    <div class="admin-toggle-circle" id="admin-toggle-circle"></div>
+                    <div class="admin-toggle-text">I am admin</div>
+                </div>
+                <!-- Admin Password Section -->
+                <div class="admin-password-section" id="admin-password-section">
+                    <label>Enter admin password:</label>
+                    <input type="password" class="admin-password-input" id="admin-password" placeholder="Enter password">
+                    <button class="admin-password-btn" id="admin-password-btn">Submit</button>
+                    <div class="admin-password-error" id="admin-password-error">Incorrect password. Please try again.</div>
+                </div>
+                <!-- Room Link -->
+                <div class="section">
+                    <label>Your Room Link</label>
+                    <div class="copy-input-wrapper">
+                        <input type="text" class="input" id="room-link" value="https://secretnickswap.com/join/abc123" readonly>
+                        <button class="copy-btn" data-target="room-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                            </svg>
+                            <span class="copy-tooltip">Copy to clipboard</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Invitation Note -->
+                <div class="section">
+                    <label>Invitation Note</label>
+                    <div class="note-box">
+                        Hey!<br><br>
+                        Join our Secret Nick and make this holiday season magical! 🎄<br>
+                        You'll get to surprise someone with a gift — and receive one too. 🎁✨<br><br>
+                        🔗 Join here:<br>
+                        https://secretnickswap.com/join/abc123
+                    </div>
+                </div>
+                <!-- Personal Participant Link -->
+                <div class="section">
+                    <label>Your Personal Participant Link</label>
+                    <p style="margin: 4px 0 8px; color:#777; font-size:14px;">
+                        This is your unique personal link to access the Secret Nick room.
+                    </p>
+                    <div class="copy-input-wrapper">
+                        <input type="text" class="input" id="personal-link" value="https://secretnickswap.com/join/yourlink456" readonly>
+                        <button class="copy-btn" data-target="personal-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                            </svg>
+                            <span class="copy-tooltip">Copy to clipboard</span>
+                        </button>
+                    </div>
+                    <p style="margin-top:6px; color:#c12727; font-size:14px;">Do not share this link with other users</p>
+                </div>
+                <button class="button" id="visit-room-btn">Visit Your Room</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTICIPANT PAGE -->
+    <section class="participant-page" id="participant-page">
+        <!-- Decorations for participant page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat.png" class="app-flake app-f1">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(1).png" class="app-flake app-f2">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(2).png" class="app-flake app-f3">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(3).png" class="app-flake app-f4">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/firework.png" class="app-fw app-fw1">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/firework%20(1).png" class="app-fw app-fw2">
+        <!-- New presents image for participant page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/presents.png" class="app-presents-img">
+        <!-- New present image for participant page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/present.png" class="app-present-img">
+        <!-- New snowglobe image for participant page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/snowglobe.png" class="app-snowglobe-img">
+        <!-- MAIN CONTENT -->
+        <div class="participant-container">
+            <!-- LEFT SIDE -->
+            <div class="participant-left">
+                <!-- Secret Squad Card -->
+                <div class="squad-card">
+                    <!-- Ball decoration in top right corner -->
+                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/Ball%20Decor.png" class="squad-ball-decoration">
+                    <h2>Secret Squad</h2>
+                    <p class="squad-desc">
+                        Hey everyone!<br>
+                        Welcome to our Secret Nick gift exchange! Check the wishlist, see who's playing, and get ready for some holiday magic. Let's make this a festive and fun surprise!
+                    </p>
+                    <div class="info-boxes">
+                        <div class="info-box">
+                            <div class="info-title">
+                                <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat.png" class="info-title-icon">
+                                Exchange Date
+                            </div>
+                            <span id="participant-exchange-date">06 Dec 2025</span>
+                        </div>
+                        <div class="info-box">
+                            <div class="info-title">
+                                <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/presents.png" class="info-title-icon">
+                                Gift Budget
+                            </div>
+                            <span id="participant-gift-budget">1000 UAH</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Who's Playing -->
+                <div class="participant-card players-card">
+                    <!-- Vector decoration in top right corner -->
+                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/Vector.png" class="players-vector-decoration">
+                    <h2>Who's Playing? <span style="color:#555; font-size:16px;" id="players-count">10/20</span></h2>
+                    <div class="player-row" data-player="Anastasiia Petrenko">
+                        Anastasiia Petrenko
+                        <button class="delete-btn admin-only" style="display: none;">Delete</button>
+                    </div>
+                    <div class="player-row" data-player="Kostiantyna Nechyporenko">
+                        Kostiantyna Nechyporenko
+                        <button class="delete-btn admin-only" style="display: none;">Delete</button>
+                    </div>
+                    <div class="player-row" id="current-user-row" data-player="Maria Shevchenko">
+                        Maria Shevchenko <span class="you-label">You</span>
+                    </div>
+                    <div class="player-row" data-player="Mykyta Slivchuk">
+                        Mykyta Slivchuk
+                        <button class="delete-btn admin-only" style="display: none;">Delete</button>
+                    </div>
+                    <div class="player-row" data-player="Kateryna Moravska">
+                        Kateryna Moravska
+                        <button class="delete-btn admin-only" style="display: none;">Delete</button>
+                    </div>
+                    <div class="player-row" data-player="Ivan Moldvinenko">
+                        Ivan Moldvinenko
+                        <button class="delete-btn admin-only" style="display: none;">Delete</button>
+                    </div>
+                    <div class="player-row" data-player="Serhii Kovalenko">
+                        Serhii Kovalenko
+                        <button class="delete-btn admin-only" style="display: none;">Delete</button>
+                    </div>
+                    <div class="player-row" data-player="Valeria Solominka">
+                        Valeria Solominka
+                        <button class="delete-btn admin-only" style="display: none;">Delete</button>
+                    </div>
+                    <div class="player-row" data-player="Veronica Andriyenko">
+                        Veronica Andriyenko
+                        <button class="delete-btn admin-only" style="display: none;">Delete</button>
+                    </div>
+                    <div class="player-row" data-player="Ivan Kolodii">
+                        Ivan Kolodii
+                        <button class="delete-btn admin-only" style="display: none;">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <!-- RIGHT SIDE -->
+            <div class="participant-right">
+                <!-- Participant card -->
+                <div class="participant-info-card">
+                    <!-- Decoration in top right corner of red rectangle -->
+                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(1).png" class="participant-info-decoration">
+                    <h3>Hi, <span id="participant-name">Maria</span></h3>
+                    <p>Get ready for happy gift exchange and fun in Secret Nick game!</p>
+                    <p>Your Participant Link</p>
+                    <input type="text" id="participant-personal-link" value="https://secretnickswap.com/join/yourlink456" readonly />
+                    <div class="small-text">Do not share this link with other users</div>
+                    <button class="button-outline" id="view-info-btn">View Information</button>
+                </div>
+                <!-- Look Who You Got Card -->
+                <div class="look-who-card" id="look-who-card">
+                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/S.Nick.png" alt="Santa" class="look-who-santa-img">
+                    <div class="look-who-top-bg"></div>
+                    <h1>Look Who You Got!</h1>
+                    <p class="look-who-subtitle">You are a Secret Nick to</p>
+                    <div class="look-who-name" id="look-who-name">Anastasiia Petrenko</div>
+                    <button class="look-who-btn" id="look-who-btn">Read Details</button>
+                </div>
+                <!-- Draw Names Card (Admin only) -->
+                <div class="draw-names-card" id="draw-names-card">
+                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/Gifts.png" alt="Gifts" class="draw-names-img">
+                    <div class="draw-names-top-bg"></div>
+                    <h1>Let the Magic Begin!</h1>
+                    <div class="draw-names-description">Don't forget to hit the button to<br>randomly pair everyone in the game.</div>
+                    <button class="draw-names-btn" id="draw-names-btn">Draw Names</button>
+                </div>
+                <!-- Wishlist -->
+                <div class="participant-card wishlist-card">
+                    <h2>
+                        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/snowflake.png" class="wishlist-snowflake wishlist-snowflake-left">
+                        My Wishlist
+                        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/snowflake.png" class="wishlist-snowflake wishlist-snowflake-right">
+                    </h2>
+                    <div id="participant-wishlist-container">
+                        <!-- Wishlist items will be dynamically added here -->
+                    </div>
+                    <button class="button-green" id="view-wishlist-btn">View Wishlist</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WISHLIST PAGE -->
+    <section class="wishlist-page" id="wishlist-page">
+        <!-- Decorations for wishlist page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat.png" class="app-flake app-f1">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(1).png" class="app-flake app-f2">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(2).png" class="app-flake app-f3">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(3).png" class="app-flake app-f4">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/firework.png" class="app-fw app-fw1">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/firework%20(1).png" class="app-fw app-fw2">
+        <!-- New presents image for wishlist page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/presents.png" class="app-presents-img">
+        <!-- New present image for wishlist page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/present.png" class="app-present-img">
+        <!-- New snowglobe image for wishlist page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/snowglobe.png" class="app-snowglobe-img">
+        <div class="wishlist-container">
+            <!-- Decoration image in top left corner for wishlist page -->
+            <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/presents.png" class="wishlist-decoration">
+            <h1>
+                <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/snowflake.png" class="wishlist-snowflake wishlist-snowflake-left">
+                My Wishlist
+                <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/snowflake.png" class="wishlist-snowflake wishlist-snowflake-right">
+            </h1>
+            <div class="wishlist-items" id="wishlist-page-items">
+                <!-- Wishlist items will be dynamically added here -->
+            </div>
+            <button class="back-button" id="back-to-participant-btn">Back to Room</button>
+        </div>
+    </section>
+
+    <!-- PERSONAL INFO PAGE -->
+    <section class="personal-info-page" id="personal-info-page">
+        <!-- Decorations for personal info page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat.png" class="app-flake app-f1">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(1).png" class="app-flake app-f2">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(2).png" class="app-flake app-f3">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(3).png" class="app-flake app-f4">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/firework.png" class="app-fw app-fw1">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/firework%20(1).png" class="app-fw app-fw2">
+        <!-- New presents image for personal info page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/presents.png" class="app-presents-img">
+        <!-- New present image for personal info page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/present.png" class="app-present-img">
+        <!-- New snowglobe image for personal info page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/snowglobe.png" class="app-snowglobe-img">
+        <div class="personal-info-container">
+            <!-- Decoration image in top left corner for personal info page -->
+            <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/car.png" class="personal-info-decoration">
+            <div class="close-btn" id="close-info-btn">✕</div>
+            <!-- Текст "Personal Information" переміщений після зображення -->
+            <h1>Personal Information</h1>
+            <p class="personal-info-subtitle">Secret Nick needs to know where to send your present!</p>
+            <div class="info-box">
+                <div class="grid">
+                    <!-- Перший стовбчик переміщений ближче до лівого краю -->
+                    <div style="margin-right: 20px;">
+                        <div class="label">First name</div>
+                        <div class="value" id="info-first-name">Anastasiia</div>
+                    </div>
+                    <div>
+                        <div class="label">Last name</div>
+                        <div class="value" id="info-last-name">Petrenko</div>
+                    </div>
+                    <div style="margin-right: 20px;">
+                        <div class="label">Phone number</div>
+                        <div class="value" id="info-phone">+38 099 876 54 32</div>
+                    </div>
+                    <div>
+                        <div class="label">Email</div>
+                        <div class="value" id="info-email">anastasiiapetrenko@gmail.com</div>
+                    </div>
+                    <div style="grid-column: 1 / 3;">
+                        <div class="label">Delivery address</div>
+                        <div class="value" id="info-address">Kyiv, NP #212</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOOK WHO YOU GOT PAGE -->
+    <section class="look-who-page" id="look-who-page">
+        <!-- Decorations for look who page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat.png" class="app-flake app-f1">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(1).png" class="app-flake app-f2">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(2).png" class="app-flake app-f3">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/flat%20(3).png" class="app-flake app-f4">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/firework.png" class="app-fw app-fw1">
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/firework%20(1).png" class="app-fw app-fw2">
+        <!-- New presents image for look who page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/presents.png" class="app-presents-img">
+        <!-- New present image for look who page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/present.png" class="app-present-img">
+        <!-- New snowglobe image for look who page -->
+        <img src="https://raw.githubusercontent.com/KarinaR-Ch/MarathonEpam/refs/heads/main/src/loading%20page/snowglobe.png" class="app-snowglobe-img">
+        <div class="look-who-header">
+            Look Who You Got!
+        </div>
+        <div class="look-who-container">
+            <div class="look-who-grid">
+                <!-- PERSONAL INFORMATION -->
+                <div>
+                    <h2>Personal Information</h2>
+                    <div class="look-who-card-styled">
+                        <div class="snowflakes">❄️❄️</div>
+                        <div class="field-title">First name</div>
+                        <div class="field-value" id="look-who-first-name">Anastasiia</div>
+                        <div class="field-title">Last name</div>
+                        <div class="field-value" id="look-who-last-name">Petrenko</div>
+                        <div class="field-title">Phone number</div>
+                        <div class="field-value" id="look-who-phone">+38 099 876 54 32</div>
+                        <div class="field-title">Email</div>
+                        <div class="field-value" id="look-who-email">mariashevchenko@gmail.com</div>
+                        <div class="field-title">Delivery address</div>
+                        <div class="field-value" id="look-who-address">Kyiv, NP #212</div>
+                    </div>
+                </div>
+                <!-- WISHLIST */ -->
+                <div>
+                    <h2>Wishlist</h2>
+                    <div class="wish-item-styled">
+                        <span>Candies</span>
+                        <a href="https://himopt.com.ua/ua/shokoladnie-konfeti-ferrero-rocher-16-shtuk-200-g.html" target="_blank" class="link">Link</a>
+                    </div>
+                    <div class="wish-item-styled">
+                        <span>Christmass Candle</span>
+                    </div>
+                    <div class="wish-item-styled">
+                        <span>Harry Potter books</span>
+                        <a href="https://www.britishbook.ua/detail/harry-potter-and-the-philosopher-s-stone_3/?gad_source=4&gad_campaignid=20286857922&gbraid=0AAAAApy32kXaVIiMyvc0suCTWI0niNU7e&gclid=CjwKCAiAz_DIBhBJEiwAVH2XwEFA1_aSvs5EpDIW9r3R-szJSS2F1-PBlA367RkgqUxIJotBsUSOGxoCP1MQAvD_BwE" target="_blank" class="link">Link</a>
+                    </div>
+                    <div class="wish-item-styled">
+                        <span>Chocolate Bar</span>
+                    </div>
+                    <div class="wish-item-styled">
+                        <span>Puppy with little brown eyes and funny tail</span>
+                        <a href="https://antoshka.ua/uk/pesik-chi-chi-love-pi-pi-pappi-5893460.html" target="_blank" class="link">Link</a>
+                    </div>
+                </div>
+            </div>
+            <button class="btn" id="back-to-participant-from-look-who">Go Back to Room</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-left">© 2025 EPAM Systems. All rights reserved.</div>
+        <div class="footer-right">Privacy Policy Privacy Notice</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
