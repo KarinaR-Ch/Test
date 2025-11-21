@@ -1,0 +1,1811 @@
+/* -------------------- NEW HEADER STYLES (ADDED) --------------------- */
+.main-header {
+    width: 100%;
+    height: 68px;
+    background: white;
+    border-bottom: 1px solid var(--divider-color);
+    padding: 20px 120px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    opacity: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* -------------------- NEW FOOTER STYLES (ADDED) --------------------- */
+.main-footer {
+    width: 100%;
+    height: 61px;
+    background: #192D1E;
+    padding: 20px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+}
+
+.footer-left, .footer-right {
+    font-family: Nunito;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #FAFAFA;
+    opacity: 1;
+    white-space: nowrap;
+}
+
+/* -------------------- NEW LANDING PAGE STYLES (ADDED) --------------------- */
+.landing-wrapper {
+    background: linear-gradient(#eef7ff, #ffffff);
+    padding: 80px 20px 120px;
+    text-align: center;
+    position: relative;
+}
+
+.landing-wrapper h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.landing-wrapper p {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.landing-btn {
+    display: inline-block;
+    background: #265b33;
+    color: white;
+    padding: 14px 34px;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.landing-btn:hover {
+    background: #1c4426;
+}
+
+/* Floating decorative cards */
+.float-card {
+    position: absolute;
+    background: white;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px dashed;
+}
+
+.float-card img {
+    width: 22px;
+}
+
+/* Positioning floating elements similar to screenshot */
+.fc1 { top: 160px; left: 6%; background: #D5E7D9; border-color: #76977E; }
+.fc2 { top: 140px; right: 8%; background: #FBEFEF; border-color: #EBADAD; }
+.fc3 { bottom: 140px; left: 10%; background: #FBEFEF; border-color: #EBADAD; }
+.fc4 { bottom: 150px; right: 10%; background: #D5E7D9; border-color: #76977E; }
+
+/* Snowflake decorations */
+.flake {
+    position: absolute;
+    opacity: 0.25;
+}
+
+.f1 { top: 20px; left: 0; width: 120px; }
+.f2 { top: 30px; right: 0; width: 120px; }
+.f3 { bottom: 40px; left: 0; width: 140px; }
+.f4 { bottom: 40px; right: 0; width: 140px; }
+
+/* Fireworks dots */
+.fw {
+    position: absolute;
+    width: 80px;
+}
+
+.fw1 { top: 20px; left: 45%; }
+.fw2 { bottom: 20px; left: 50%; }
+
+/* New presents image */
+.presents-img {
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    left: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* New present image */
+.present-img {
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    right: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* New snowglobe image */
+.snowglobe-img {
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    right: 10px;
+    bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .snowglobe-img {
+        left: calc(50% + 230px);
+        top: calc(50% + 95px);
+        right: auto;
+        bottom: auto;
+    }
+}
+
+/* ----------------- APP PAGE STYLES ----------------- */
+.app-page {
+    display: none;
+    min-height: calc(100vh - 129px); /* Висота viewport мінус header і footer */
+    background: linear-gradient(#eef7ff, #ffffff);
+    padding: 80px 20px 120px;
+    position: relative;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    padding: 40px 60px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 2;
+}
+
+/* Decoration image in top right corner */
+.wrapper-decoration {
+    position: absolute;
+    top: -90px;
+    right: -90px;
+    width: 180px;
+    height: 180px;
+    z-index: 3;
+}
+
+/* Progress steps */
+.progress-steps {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.step.active .step-number {
+    background: #265b33;
+    color: white;
+}
+
+.step-text {
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+}
+
+.step.active .step-text {
+    color: #265b33;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p.subtitle {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.input, .textarea, .date-input, .budget-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.textarea {
+    height: 110px;
+    resize: none;
+}
+
+.row {
+    display: flex;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.half {
+    flex: 1;
+}
+
+.budget-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.currency-tag {
+    padding: 12px 16px;
+    background: #f3f3f3;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.phone-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.phone-prefix {
+    padding: 12px 16px;
+    background: #f3f3f3;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.continue-btn {
+    width: 100%;
+    padding: 16px;
+    margin-top: 30px;
+    background: #ccc;
+    color: #444;
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.continue-btn.active {
+    background: #2C5134;
+    color: white;
+    cursor: pointer;
+}
+
+.back-link {
+    margin-top: 20px;
+    display: inline-block;
+    color: #3a593f;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.app-footer {
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.app-footer a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Step 3 specific styles */
+.gift-budget {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gift-budget-icon {
+    width: 30px;
+    height: 32px;
+}
+
+.section {
+    border: 1px solid #d8e5d8;
+    background: #f3faf3;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.count {
+    font-size: 12px;
+    color: #777;
+    margin-top: 3px;
+}
+
+.add-btn {
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: 2px dashed #777;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.add-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.option-box {
+    border: 1px solid #ddd;
+    padding: 18px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.complete-btn {
+    width: 100%;
+    padding: 16px;
+    margin-top: 35px;
+    background: #ccc;
+    color: #444;
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.complete-btn.active {
+    background: #2C5134;
+    color: white;
+    cursor: pointer;
+}
+
+.wish-item {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed #ddd;
+}
+
+.wish-item:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+/* Step 4 specific styles */
+.section {
+    margin-bottom: 28px;
+}
+
+.note-box {
+    background: #f6faf6;
+    border-radius: 10px;
+    padding: 18px;
+    border: 1px solid #d9e3d5;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.button {
+    width: 100%;
+    background: #1c5931;
+    padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    margin-top: 14px;
+}
+
+.button:hover {
+    background: #164a28;
+}
+
+/* Snowflake decorations for app page */
+.app-flake {
+    position: absolute;
+    opacity: 0.25;
+}
+
+.app-f1 { top: 20px; left: 0; width: 120px; }
+.app-f2 { top: 30px; right: 0; width: 120px; }
+.app-f3 { bottom: 40px; left: 0; width: 140px; }
+.app-f4 { bottom: 40px; right: 0; width: 140px; }
+
+/* Fireworks dots for app page */
+.app-fw {
+    position: absolute;
+    width: 80px;
+}
+
+.app-fw1 { top: 20px; left: 45%; }
+.app-fw2 { bottom: 20px; left: 50%; }
+
+/* New presents image for app page */
+.app-presents-img {
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    left: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* New present image for app page */
+.app-present-img {
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    right: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* New snowglobe image for app page */
+.app-snowglobe-img {
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    right: 10px;
+    bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .app-snowglobe-img {
+        left: calc(50% + 230px);
+        top: calc(50% + 95px);
+        right: auto;
+        bottom: auto;
+    }
+}
+
+/* ---------------- COPY BUTTON STYLES ---------------- */
+.copy-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.copy-input-wrapper .input {
+    padding-right: 50px;
+}
+
+.copy-btn {
+    position: absolute;
+    right: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.copy-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.copy-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: #666;
+}
+
+.copy-btn.copied svg {
+    fill: #2C5134;
+}
+
+.copy-tooltip {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background: #2C5134;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.copy-btn:hover .copy-tooltip {
+    opacity: 1;
+}
+
+/* ---------------- PARTICIPANT PAGE STYLES ---------------- */
+.participant-page {
+    display: none;
+    min-height: calc(100vh - 129px);
+    background: linear-gradient(#eef7ff, #ffffff);
+    padding: 40px 20px;
+    position: relative;
+}
+
+.participant-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+}
+
+@media (min-width: 768px) {
+    .participant-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+/* LEFT COLUMN */
+.participant-left {
+    flex: 2.2;
+}
+
+/* RIGHT COLUMN */
+.participant-right {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* CARDS */
+.participant-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+@media (min-width: 768px) {
+    .participant-card {
+        padding: 20px 26px;
+    }
+}
+
+/* Secret Squad Card */
+.squad-card {
+    background: #195a36;
+    color: white;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .squad-card {
+        padding: 28px;
+    }
+}
+
+.squad-card h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+@media (min-width: 768px) {
+    .squad-card h2 {
+        font-size: 26px;
+    }
+}
+
+.squad-desc {
+    max-width: 100%;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .squad-desc {
+        max-width: 480px;
+        margin-bottom: 22px;
+        font-size: inherit;
+    }
+}
+
+.info-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media (min-width: 768px) {
+    .info-boxes {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+.info-box {
+    flex: 1;
+    background: white;
+    color: black;
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+    .info-box {
+        padding: 16px;
+        font-size: 15px;
+    }
+}
+
+.info-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .info-title {
+        font-size: inherit;
+    }
+}
+
+.info-title-icon {
+    width: 30px;
+    height: 32px;
+}
+
+/* Ball decoration for Secret Squad card */
+.squad-ball-decoration {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    height: 166px;
+    z-index: 1;
+}
+
+/* Vector decoration for Who's Playing card */
+.players-vector-decoration {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 366px;
+    height: 66px;
+    z-index: 1;
+}
+
+/* Participant Info Card */
+.participant-info-card {
+    background: #d64040;
+    color: white;
+    padding: 18px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .participant-info-card {
+        padding: 22px;
+    }
+}
+
+.participant-info-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+@media (min-width: 768px) {
+    .participant-info-card h3 {
+        font-size: 22px;
+    }
+}
+
+.participant-info-card input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .participant-info-card input {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+.small-text {
+    font-size: 11px;
+    opacity: 0.9;
+    margin-top: 4px;
+}
+
+@media (min-width: 768px) {
+    .small-text {
+        font-size: 12px;
+    }
+}
+
+.button-outline {
+    margin-top: 12px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .button-outline {
+        margin-top: 14px;
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+.button-outline:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* Decoration for Participant Info Card */
+.participant-info-decoration {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 41.9px;
+    height: 41.9px;
+    z-index: 1;
+}
+
+/* WHO'S PLAYING */
+.players-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.players-card h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .players-card h2 {
+        font-size: 24px;
+    }
+}
+
+.player-row {
+    background: #f9fafb;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .player-row {
+        padding: 14px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+}
+
+.you-label {
+    font-size: 12px;
+    color: #195a36;
+}
+
+.admin-label {
+    font-size: 12px;
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .you-label {
+        font-size: 13px;
+    }
+    .admin-label {
+        font-size: 13px;
+    }
+}
+
+.delete-btn {
+    background: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background: #b71c1c;
+}
+
+/* WISHLIST */
+.wishlist-card h2 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    text-align: center;
+    background: #2C5134;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .wishlist-card h2 {
+        margin: 0 0 14px 0;
+        font-size: inherit;
+    }
+}
+
+.wishlist-snowflake {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+}
+
+.wishlist-snowflake-left {
+    left: 10px;
+}
+
+.wishlist-snowflake-right {
+    right: 10px;
+}
+
+.wish-row {
+    background: white;
+    border: 1px solid #e9ecef;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+@media (min-width: 768px) {
+    .wish-row {
+        padding: 12px;
+        margin-bottom: 10px;
+        font-size: inherit;
+    }
+}
+
+.wish-link {
+    color: #195a36;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .wish-link {
+        font-size: 14px;
+    }
+}
+
+.button-green {
+    margin-top: 10px;
+    width: 100%;
+    padding: 11px;
+    border-radius: 10px;
+    border: 2px solid #195a36;
+    background: white;
+    color: #195a36;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .button-green {
+        padding: 13px;
+        font-size: inherit;
+    }
+}
+
+.button-green:hover {
+    background: #195a36;
+    color: white;
+}
+
+/* ---------------- LOOK WHO YOU GOT CARD STYLES ---------------- */
+.look-who-card {
+    display: none;
+    width: 100%;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    padding: 32px 24px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.look-who-top-bg {
+    background: #e3d5c7;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 20px 20px 0 0;
+}
+
+.look-who-santa-img {
+    width: 256px;
+    height: 161px;
+    position: absolute;
+    top: -130px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.look-who-card h1 {
+    margin-top: 0;
+    color: #c62828;
+    font-size: 26px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    transform: translateY(-35px);
+}
+
+.look-who-subtitle {
+    margin: 16px 0 10px;
+    color: #444;
+    font-size: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.look-who-name {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: #000;
+    position: relative;
+    z-index: 1;
+}
+
+.look-who-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 40px;
+    border: 2px solid #2f5330;
+    color: #2f5330;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background: white;
+}
+
+.look-who-btn:hover {
+    background: #2f5330;
+    color: white;
+}
+
+/* ---------------- DRAW NAMES CARD STYLES ---------------- */
+.draw-names-card {
+    display: none;
+    width: 100%;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    padding: 32px 24px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.draw-names-top-bg {
+    background: #e3d5c7;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 20px 20px 0 0;
+}
+
+.draw-names-img {
+    width: 150px;
+    height: 106px;
+    position: absolute;
+    top: -80px;
+    right: 10px;
+    z-index: 2;
+}
+
+.draw-names-card h1 {
+    margin-top: 0;
+    color: #CC3332;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 150%;
+    transform: translateY(-35px);
+}
+
+.draw-names-description {
+    margin: 16px 0 10px;
+    color: #444;
+    font-size: 15px;
+    position: relative;
+    z-index: 1;
+    line-height: 150%;
+}
+
+.draw-names-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 40px;
+    border: 2px solid #2f5330;
+    color: #2f5330;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+    position: relative;
+    z-index: 1;
+    background: white;
+    cursor: pointer;
+}
+
+.draw-names-btn:hover {
+    background: #2f5330;
+    color: white;
+}
+
+/* ---------------- WISHLIST PAGE STYLES ---------------- */
+.wishlist-page {
+    display: none;
+    min-height: calc(100vh - 129px);
+    background: linear-gradient(#eef7ff, #ffffff);
+    padding: 40px 20px;
+    position: relative;
+}
+
+.wishlist-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.wishlist-decoration {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 69px;
+    height: 56px;
+    z-index: 3;
+}
+
+.wishlist-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #195a36;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.wishlist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.wishlist-item {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+}
+
+.wishlist-item h3 {
+    margin: 0 0 10px 0;
+    color: #195a36;
+    font-size: 18px;
+}
+
+.wishlist-item-link {
+    color: #195a36;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.wishlist-item-link:hover {
+    color: #134028;
+}
+
+.back-button {
+    display: block;
+    width: 200px;
+    margin: 30px auto 0;
+    padding: 12px;
+    background: #195a36;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background: #134028;
+}
+
+/* ---------------- PERSONAL INFO PAGE STYLES ---------------- */
+.personal-info-page {
+    display: none;
+    min-height: calc(100vh - 129px);
+    background: linear-gradient(#eef7ff, #ffffff);
+    padding: 40px 20px;
+    position: relative;
+}
+
+.personal-info-container {
+    width: 100%;
+    max-width: 820px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 16px;
+    padding: 40px 50px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.personal-info-decoration {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 69px;
+    height: 56px;
+    z-index: 3;
+}
+
+.close-btn {
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    font-size: 26px;
+    color: #3d5d3f;
+    cursor: pointer;
+}
+
+.personal-info-container h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+.personal-info-subtitle {
+    margin: 0 0 25px;
+    color: #555;
+    text-align: center;
+}
+
+.info-box {
+    border: 1px solid #CAD8C9;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 20px;
+}
+
+.label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.value {
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+}
+
+.btn-row {
+    margin-top: 30px;
+    text-align: right;
+    display: none;
+}
+
+.back-btn {
+    background: #2F5330;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header {
+    display: none;
+}
+
+.header img {
+    width: 70px;
+}
+
+/* ---------------- LOOK WHO YOU GOT PAGE STYLES ---------------- */
+.look-who-page {
+    display: none;
+    min-height: calc(100vh - 129px);
+    background: linear-gradient(#eef7ff, #ffffff);
+    padding: 40px 20px;
+    position: relative;
+}
+
+.look-who-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.look-who-header {
+    background: #e6d8c7;
+    padding: 35px 0;
+    text-align: center;
+    font-size: 32px;
+    color: #b32727;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.look-who-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.look-who-card-styled {
+    background: #f9fdf9;
+    padding: 30px;
+    border: 1px solid #d3e4d3;
+    border-radius: 12px;
+    position: relative;
+}
+
+.snowflakes {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    color: #7da28c;
+}
+
+.field-title {
+    font-size: 14px;
+    color: #686868;
+    margin-bottom: 4px;
+}
+
+.field-value {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.wish-item-styled {
+    background: #ffffff;
+    padding: 18px 26px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    font-size: 16px;
+    color: #004d2b;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.btn {
+    display: block;
+    margin: 40px auto 0;
+    padding: 16px 40px;
+    background: #1e4422;
+    color: white;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #15331a;
+}
+
+/* ---------------- ADMIN TOGGLE STYLES ---------------- */
+.admin-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #d8e5d8;
+    background: #f3faf3;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.admin-toggle-text {
+    font-weight: 600;
+    color: #265b33;
+}
+
+.admin-toggle-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #265b33;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.admin-toggle-circle.active {
+    background-color: #265b33;
+}
+
+.admin-toggle-circle.active::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.admin-password-section {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #d8e5d8;
+    background: #f9fdf9;
+    border-radius: 12px;
+}
+
+.admin-password-section.active {
+    display: block;
+}
+
+.admin-password-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.admin-password-btn {
+    padding: 10px 20px;
+    background: #265b33;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.admin-password-btn:hover {
+    background: #1c4426;
+}
+
+.admin-password-error {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 8px;
+    display: none;
+}
+
+/* ---------------- DELETE CONFIRMATION MODAL STYLES ---------------- */
+.delete-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.delete-modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #d32f2f;
+}
+
+.delete-modal-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.delete-modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.delete-modal-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-modal-yes {
+    background: #d32f2f;
+    color: white;
+}
+
+.delete-modal-yes:hover {
+    background: #b71c1c;
+}
+
+.delete-modal-no {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.delete-modal-no:hover {
+    background: #e0e0e0;
+}
+
+/* Mobile-specific adjustments for header and footer */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 20px;
+        height: 60px;
+    }
+    
+    .main-footer {
+        padding: 20px;
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .footer-left, .footer-right {
+        white-space: normal;
+    }
+    
+    .float-card {
+        display: none; /* Hide floating cards on mobile */
+    }
+    
+    .presents-img,
+    .present-img,
+    .snowglobe-img,
+    .app-presents-img,
+    .app-present-img,
+    .app-snowglobe-img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .flake,
+    .app-flake {
+        width: 80px;
+    }
+    
+    .fw,
+    .app-fw {
+        width: 60px;
+    }
+    
+    .wishlist-container {
+        padding: 20px;
+    }
+    
+    .personal-info-container {
+        padding: 20px;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+    
+    .header img {
+        width: 50px;
+    }
+    
+    .squad-ball-decoration {
+        width: 150px;
+        height: 83px;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .players-vector-decoration {
+        width: 183px;
+        height: 33px;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .wishlist-snowflake {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .participant-info-decoration {
+        width: 35px;
+        height: 35px;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .look-who-card {
+        padding: 24px 20px;
+    }
+    
+    .look-who-santa-img {
+        width: 200px;
+        height: 126px;
+        top: -100px;
+    }
+    
+    .look-who-card h1 {
+        font-size: 22px;
+        height: 70px;
+        transform: translateY(-25px);
+    }
+    
+    .look-who-name {
+        font-size: 22px;
+    }
+    
+    .look-who-btn {
+        padding: 10px 24px;
+        font-size: 15px;
+    }
+    
+    .draw-names-card {
+        padding: 24px 20px;
+    }
+    
+    .draw-names-img {
+        width: 120px;
+        height: 85px;
+        top: -60px;
+    }
+    
+    .draw-names-card h1 {
+        font-size: 18px;
+        height: 70px;
+        transform: translateY(-25px);
+    }
+    
+    .draw-names-btn {
+        padding: 10px 24px;
+        font-size: 15px;
+    }
+    
+    .look-who-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .look-who-header {
+        padding: 25px 0;
+        font-size: 26px;
+    }
+    
+    .delete-modal-content {
+        padding: 20px;
+    }
+    
+    .delete-modal-buttons {
+        flex-direction: column;
+    }
+    
+    .delete-modal-btn {
+        width: 100%;
+    }
+}
+
+/* ---------------- YOUR ORIGINAL STYLES BELOW ---------------- */
+:root {
+    --primary-color: #d32f2f;
+    --primary-light: #ff6659;
+    --primary-dark: #9a0007;
+    --secondary-color: #388e3c;
+    --secondary-light: #6abf69;
+    --secondary-dark: #00600f;
+    --background-color: #f5f5f5;
+    --surface-color: #ffffff;
+    --text-primary: #212121;
+    --text-secondary: #757575;
+    --divider-color: #bdbdbd;
+    --shadow: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-hover: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* ---------- YOUR ORIGINAL CSS KEPT AS IS ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: var(--background-color); color: var(--text-primary); line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+header { display:none; } /* Hidden because landing page replaces it */
+/* ... (весь інший CSS залишився без змін) ... */
